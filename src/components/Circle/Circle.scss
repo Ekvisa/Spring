@@ -1,0 +1,12 @@
+$lightGrayColor: #c8ceda;
+
+.circle {
+  position: relative;
+  width: calc(2 * var(--circle-radius));
+  height: calc(2 * var(--circle-radius));
+  border: 1px solid $lightGrayColor;
+  border-radius: 50%;
+  margin: 0 auto;
+  transform: rotate(var(--rotationAngle));
+  transition: transform 1s ease-in-out;
+}

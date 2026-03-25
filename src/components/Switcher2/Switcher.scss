@@ -1,0 +1,34 @@
+$lightGrayColor: #c8ceda;
+
+.switcher {
+  position: absolute;
+  width: calc(2 * var(--switcher-radius));
+  height: calc(2 * var(--switcher-radius));
+  border: 1px solid $lightGrayColor;
+  background-color: white;
+  top: calc(50% - var(--switcher-radius));
+  left: calc(50% - var(--switcher-radius));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--switcher-radius);
+  transform: rotate(var(--correctionAngle)) translate(var(--circle-radius));
+  transition: transform 1s ease-in-out;
+
+  .switcherSign {
+    transform: rotate(
+      calc(-1 * var(--correctionAngle))
+    ); // текст всегда горизонтально
+    transition: transform 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    .switcherName {
+      position: absolute;
+      left: calc(2 * var(--switcher-radius));
+    }
+  }
+}
