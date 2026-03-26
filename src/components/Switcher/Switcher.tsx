@@ -49,7 +49,7 @@ function Switcher({
       >
         {char.sign}
         <span className="switcherName">
-          {char.name}
+          {char.name.split(" ")[0]}
           {/* {index} {switcherAngle} */}
         </span>
       </div>

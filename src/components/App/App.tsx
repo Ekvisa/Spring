@@ -9,7 +9,7 @@ function App() {
   // const dotRadius = 30;
   // const circleRadius = 300;
   return (
-    <div className="App">
+    <div className="app">
       <Circle
         dotsCount={dotsCount}
         // dotRadius={dotRadius}

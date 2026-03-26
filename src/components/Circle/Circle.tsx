@@ -24,33 +24,29 @@ function Circle({ dotsCount, circleRadius }: CircleProps) {
     setActiveIndex(targetIndex);
   };
 
-  const createCircle = () => {
-    return (
-      <div
-        className="circle"
-        style={
-          {
-            "--circle-radius": `${circleRadius}px`,
-            "--rotationAngle": `${activeAngle + startAngle}deg`, //поворот до нулевого угла + докручивание до начальной позиции
-          } as React.CSSProperties
-        }
-      >
-        {characters.slice(0, dotsCount).map((char, i) => (
-          <Switcher
-            key={i}
-            index={i}
-            total={dotsCount}
-            char={char}
-            activeIndex={activeIndex}
-            activeAngle={activeAngle}
-            onClick={onClick}
-          />
-        ))}
-      </div>
-    );
-  };
-
-  return <div>{createCircle()}</div>;
+  return (
+    <div
+      className="circle"
+      style={
+        {
+          "--circle-radius": `${circleRadius}px`,
+          "--rotationAngle": `${activeAngle + startAngle}deg`, //поворот до нулевого угла + докручивание до начальной позиции
+        } as React.CSSProperties
+      }
+    >
+      {characters.slice(0, dotsCount).map((char, i) => (
+        <Switcher
+          key={i}
+          index={i}
+          total={dotsCount}
+          char={char}
+          activeIndex={activeIndex}
+          activeAngle={activeAngle}
+          onClick={onClick}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default Circle;

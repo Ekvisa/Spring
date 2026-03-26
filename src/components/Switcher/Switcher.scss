@@ -1,10 +1,11 @@
 $lightGrayColor: #c8ceda;
+$darkGrayColor: #333;
 
 .switcher {
   position: absolute;
   width: calc(2 * var(--switcher-radius));
   height: calc(2 * var(--switcher-radius));
-  border: 1px solid $lightGrayColor;
+  border: 1px solid $darkGrayColor;
   background-color: white;
   top: calc(50% - var(--switcher-radius));
   left: calc(50% - var(--switcher-radius));
@@ -15,9 +16,6 @@ $lightGrayColor: #c8ceda;
   font-size: var(--switcher-radius);
   transform: rotate(var(--switcherAngle)) translate(var(--circle-radius));
   transition: 1s ease-in-out;
-  &.active {
-    box-shadow: 0 0 10px black;
-  }
 
   .switcherSign {
     transform: rotate(
@@ -33,7 +31,17 @@ $lightGrayColor: #c8ceda;
     .switcherName {
       position: absolute;
       left: calc(2 * var(--switcher-radius));
-      color: rgb(49, 97, 160);
+      color: transparent;
+    }
+  }
+  &.active {
+    box-shadow: 0 0 10px $darkGrayColor;
+    border: none;
+
+    .switcherName {
+      color: $darkGrayColor;
+      font-style: italic;
+      transition: color 2s linear 1s;
     }
   }
 }
