@@ -1,0 +1,43 @@
+// .phrase {
+//   position: absolute;
+//   left: 2em;
+//   top: 0;
+//   // opacity: 0;
+//   width: 50%; //tmp
+//   transition: opacity 1s linear;
+//   &.visible {
+//     opacity: 1;
+//   }
+// }
+
+.switcherText {
+  position: absolute;
+  left: calc(2 * var(--switcher-radius));
+  top: 0;
+  color: #333;
+  animation: slowAppear 3s linear;
+
+  .name {
+    margin: 0;
+    animation: slowAppear 4s linear;
+  }
+  .phrase {
+    animation: slowAppear 5s linear;
+  }
+  .problem {
+    animation: slowAppear 6s linear;
+    color: inherit;
+  }
+}
+
+@keyframes slowAppear {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: #333;
+  }
+}

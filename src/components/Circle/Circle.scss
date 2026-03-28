@@ -1,6 +1,10 @@
 $lightGrayColor: #c8ceda;
 $darkGrayColor: #333;
 
+.circleWrapper {
+  position: relative;
+}
+
 .circle {
   position: relative;
   width: calc(2 * var(--circle-radius));
@@ -9,4 +13,6 @@ $darkGrayColor: #333;
   border-radius: 50%;
   transform: rotate(var(--rotationAngle));
   transition: transform 1s ease-in-out;
+  &::before {
+  }
 }

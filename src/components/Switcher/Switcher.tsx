@@ -1,13 +1,13 @@
 import { circleRadius, startAngle, switcherRadius } from "../../data";
+import { CharacterType } from "../../types";
+import Phrase from "../Phrase/Phrase";
 
 import "./Switcher.scss";
-
-// const radius = 30;
 
 type SwitcherProps = {
   index: number;
   total: number;
-  char: { sign: string; name: string };
+  character: CharacterType;
   activeIndex: number;
   activeAngle: number;
   onClick: (index: number) => void;
@@ -17,7 +17,7 @@ function Switcher({
   index,
   total,
 
-  char,
+  character,
   activeIndex,
   activeAngle,
   onClick,
@@ -38,7 +38,7 @@ function Switcher({
       }
     >
       <div
-        className="switcherSign"
+        className="switcherImage"
         style={
           {
             "--signAngle": `${activeAngle}deg`,
@@ -47,11 +47,20 @@ function Switcher({
           } as React.CSSProperties
         }
       >
-        {char.sign}
-        <span className="switcherName">
-          {char.name.split(" ")[0]}
-          {/* {index} {switcherAngle} */}
-        </span>
+        {character.sign}
+        {isActive && (
+          <Phrase
+            name={character.name_ru.split(" ")[0]}
+            phrase={character.phrase}
+            problem={character.problem}
+          />
+        )}
+
+        {/* <div className="switcherText">
+          {char.name.split(" ")[0] + ":"}
+
+          
+        </div> */}
       </div>
     </div>
   );

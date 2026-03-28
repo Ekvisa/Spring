@@ -16,8 +16,8 @@ $darkGrayColor: #333;
   font-size: var(--switcher-radius);
   transform: rotate(var(--switcherAngle)) translate(var(--circle-radius));
   transition: 1s ease-in-out;
-
-  .switcherSign {
+  cursor: pointer;
+  .switcherImage {
     transform: rotate(
       calc(-1 * var(--switcherAngle) - var(--correctionAngle))
     ); // содержимое горизонтально
@@ -28,20 +28,22 @@ $darkGrayColor: #333;
     align-items: start;
     justify-content: center;
 
-    .switcherName {
-      position: absolute;
-      left: calc(2 * var(--switcher-radius));
-      color: transparent;
-    }
+    // .switcherText {
+    //   position: absolute;
+    //   left: calc(2 * var(--switcher-radius));
+    //   color: transparent;
+    // }
   }
   &.active {
-    box-shadow: 0 0 10px $darkGrayColor;
-    border: none;
+    box-shadow: 0 0 10px white;
 
-    .switcherName {
-      color: $darkGrayColor;
-      font-style: italic;
-      transition: color 2s linear 1s;
-    }
+    border: none;
+    cursor: unset;
+
+    // .switcherText {
+    //   color: $darkGrayColor;
+    //   font-style: italic;
+    //   transition: color 2s linear 1s;
+    // }
   }
 }

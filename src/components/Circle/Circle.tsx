@@ -3,6 +3,8 @@ import { characters, startAngle } from "../../data";
 import { useState } from "react";
 import Switcher from "../Switcher/Switcher";
 import { normalizeAngle } from "../../types";
+import Avatar from "../Avatar/Avatar";
+import Phrase from "../Phrase/Phrase";
 
 type CircleProps = {
   dotsCount: number;
@@ -25,26 +27,30 @@ function Circle({ dotsCount, circleRadius }: CircleProps) {
   };
 
   return (
-    <div
-      className="circle"
-      style={
-        {
-          "--circle-radius": `${circleRadius}px`,
-          "--rotationAngle": `${activeAngle + startAngle}deg`, //поворот до нулевого угла + докручивание до начальной позиции
-        } as React.CSSProperties
-      }
-    >
-      {characters.slice(0, dotsCount).map((char, i) => (
-        <Switcher
-          key={i}
-          index={i}
-          total={dotsCount}
-          char={char}
-          activeIndex={activeIndex}
-          activeAngle={activeAngle}
-          onClick={onClick}
-        />
-      ))}
+    <div className="circleWrapper">
+      <Avatar activeIndex={activeIndex} />
+      {/* <Phrase activeIndex={activeIndex} /> */}
+      <div
+        className="circle"
+        style={
+          {
+            "--circle-radius": `${circleRadius}px`,
+            "--rotationAngle": `${activeAngle + startAngle}deg`, //поворот до нулевого угла + докручивание до начальной позиции
+          } as React.CSSProperties
+        }
+      >
+        {characters.slice(0, dotsCount).map((character, i) => (
+          <Switcher
+            key={i}
+            index={i}
+            total={dotsCount}
+            character={character}
+            activeIndex={activeIndex}
+            activeAngle={activeAngle}
+            onClick={onClick}
+          />
+        ))}
+      </div>
     </div>
   );
 }

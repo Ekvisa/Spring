@@ -2,6 +2,10 @@ export type CharacterType = {
   id: string;
   sign: string;
   name: string;
+  name_ru: string;
+  imagePath: string;
+  phrase: string;
+  problem: string;
 };
 
 //Приведение угла к [-180, 180]:
