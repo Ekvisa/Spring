@@ -1,0 +1,66 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-grow: 1;
+  .spring {
+    position: relative;
+    h1 {
+      font-family: georgia;
+      font-weight: bold;
+      font-style: italic;
+      //   font-size: 20vw;
+      font-size: 14em;
+      color: #ff9a9b;
+      margin: 0;
+    }
+
+    &::before {
+      content: "❀";
+      position: absolute;
+      font-size: 5em;
+
+      background-image: radial-gradient(circle, #ff9a9b 50%, transparent 50%);
+      width: 1em;
+      height: 1em;
+      left: 50%;
+      top: -0.5em;
+      color: #333;
+    }
+  }
+  section {
+    font-style: italic;
+    text-align: center;
+    margin: 0 0 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .help {
+      color: #666;
+    }
+    .motto {
+      font-style: italic;
+      color: #ff9a9b;
+    }
+    a {
+      border-radius: 1em;
+      padding: 1em;
+      margin: 1em;
+      display: block;
+      text-decoration: none;
+      &.project {
+        background-color: #ff9a9b;
+      }
+      &.stories {
+        background-color: #bbb;
+      }
+      &:hover {
+        color: white;
+        box-shadow: 0 0 10px #4c4c4ca8;
+      }
+    }
+  }
+}

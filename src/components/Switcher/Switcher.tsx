@@ -8,6 +8,7 @@ type SwitcherProps = {
   index: number;
   total: number;
   character: CharacterType;
+
   activeIndex: number;
   activeAngle: number;
   onClick: (index: number) => void;
@@ -18,6 +19,7 @@ function Switcher({
   total,
 
   character,
+
   activeIndex,
   activeAngle,
   onClick,
@@ -38,7 +40,7 @@ function Switcher({
       }
     >
       <div
-        className="switcherImage"
+        className="switcherContent"
         style={
           {
             "--signAngle": `${activeAngle}deg`,
@@ -47,20 +49,14 @@ function Switcher({
           } as React.CSSProperties
         }
       >
-        {character.sign}
+        <span className="signImage">{character.sign}</span>
         {isActive && (
           <Phrase
             name={character.name_ru.split(" ")[0]}
             phrase={character.phrase}
-            problem={character.problem}
+            problem_id={character.problem_id}
           />
         )}
-
-        {/* <div className="switcherText">
-          {char.name.split(" ")[0] + ":"}
-
-          
-        </div> */}
       </div>
     </div>
   );

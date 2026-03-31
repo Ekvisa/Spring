@@ -13,11 +13,11 @@ $darkGrayColor: #333;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--switcher-radius);
+  // font-size: var(--switcher-radius);
   transform: rotate(var(--switcherAngle)) translate(var(--circle-radius));
   transition: 1s ease-in-out;
   cursor: pointer;
-  .switcherImage {
+  .switcherContent {
     transform: rotate(
       calc(-1 * var(--switcherAngle) - var(--correctionAngle))
     ); // содержимое горизонтально
@@ -33,6 +33,10 @@ $darkGrayColor: #333;
     //   left: calc(2 * var(--switcher-radius));
     //   color: transparent;
     // }
+    .signImage {
+      font-size: var(--switcher-radius);
+      transition: 1s ease-in-out;
+    }
   }
   &.active {
     box-shadow: 0 0 10px white;

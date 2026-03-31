@@ -5,7 +5,14 @@ export type CharacterType = {
   name_ru: string;
   imagePath: string;
   phrase: string;
-  problem: string;
+  problem_id: string;
+};
+
+export type ProblemType = {
+  id: string;
+  title: string;
+  description: string;
+  questions: string[];
 };
 
 //Приведение угла к [-180, 180]:

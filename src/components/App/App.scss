@@ -1,36 +1,32 @@
 .app {
-  width: 140vw;
-  margin-left: -40vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  a {
+    color: inherit;
+  }
+  //   width: 140vw;
+  //   margin-left: -40vw;
+  //   height: 100vh;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
 
-  background:
-    // radial-gradient(circle at center, rgb(255, 255, 255), transparent 50%),
-    // conic-gradient(
-    //     from 45deg,
-    //     rgba(255, 125, 169, 0.5) 5deg 85deg,
-    //     rgba(123, 255, 151, 0.5) 95deg 175deg,
-    //     rgba(255, 181, 121, 0.5) 185deg 265deg,
-    //     /* голубой плавно уходит в розовый */ rgba(125, 184, 255, 0.5) 275deg
-    //       350deg,
-    //     rgba(200, 170, 255, 0.5) 355deg,
-    //     rgba(255, 125, 169, 0.5) 365deg
-    //   );
-    /* Modern browsers */
-    radial-gradient(circle at center, rgb(255, 255, 255), transparent 50%),
-    conic-gradient(
-      from 0deg at 50% 50%,
-      #93c6e6 17deg,
-      #ffa1a1 73deg,
-      #ffa1a1 108deg,
-      #81cc81 172deg,
-      #81cc81 194deg,
-      #f1c27c 265deg,
-      #f1c27c 284deg,
-      #93c6e6 345deg
-    );
+  //   background:
+
+  //     /* Modern browsers */
+  //     radial-gradient(circle at center, rgb(255, 255, 255), transparent 50%),
+  //     conic-gradient(
+  //       from 0deg at 50% 50%,
+  //       #93c6e6 17deg,
+  //       #ffa1a1 73deg,
+  //       #ffa1a1 108deg,
+  //       #81cc81 172deg,
+  //       #81cc81 194deg,
+  //       #f1c27c 265deg,
+  //       #f1c27c 284deg,
+  //       #93c6e6 345deg
+  //     );
 
   //   background-image: url("./../../interface_images/characters/kyo.webp");
 

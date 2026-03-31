@@ -3,18 +3,29 @@ import React from "react";
 import "./App.scss";
 import Circle from "../Circle/Circle";
 import { dotsCount, circleRadius } from "../../data";
+import { Route, Routes } from "react-router-dom";
+import Problems from "../Problems/Problems";
+import Tests from "../Tests/Tests";
+import Navigation from "../Navigation/Navigation";
+import Main from "../Main/Main";
+import About from "../About/About";
+import Problem from "../Problem/Problem";
 
 function App() {
-  // const dotsCount = 4;
-  // const dotRadius = 30;
-  // const circleRadius = 300;
   return (
     <div className="app">
-      <Circle
-        dotsCount={dotsCount}
-        // dotRadius={dotRadius}
-        circleRadius={circleRadius}
-      />
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route
+          path="/circle"
+          element={<Circle dotsCount={dotsCount} circleRadius={circleRadius} />}
+        />
+        <Route path="/problems" element={<Problems />} />
+        <Route path="/problems/:id" element={<Problem />} />
+        <Route path="/tests" element={<Tests />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </div>
   );
 }

@@ -27,29 +27,32 @@ function Circle({ dotsCount, circleRadius }: CircleProps) {
   };
 
   return (
-    <div className="circleWrapper">
-      <Avatar activeIndex={activeIndex} />
-      {/* <Phrase activeIndex={activeIndex} /> */}
-      <div
-        className="circle"
-        style={
-          {
-            "--circle-radius": `${circleRadius}px`,
-            "--rotationAngle": `${activeAngle + startAngle}deg`, //поворот до нулевого угла + докручивание до начальной позиции
-          } as React.CSSProperties
-        }
-      >
-        {characters.slice(0, dotsCount).map((character, i) => (
-          <Switcher
-            key={i}
-            index={i}
-            total={dotsCount}
-            character={character}
-            activeIndex={activeIndex}
-            activeAngle={activeAngle}
-            onClick={onClick}
-          />
-        ))}
+    <div className="seasons">
+      <div className="circleWrapper">
+        <Avatar activeIndex={activeIndex} />
+        {/* <Phrase activeIndex={activeIndex} /> */}
+        <div
+          className="circle"
+          style={
+            {
+              "--circle-radius": `${circleRadius}px`,
+              "--rotationAngle": `${activeAngle + startAngle}deg`, //поворот до нулевого угла + докручивание до начальной позиции
+            } as React.CSSProperties
+          }
+        >
+          {characters.slice(0, dotsCount).map((character, i) => (
+            <Switcher
+              key={i}
+              index={i}
+              total={dotsCount}
+              character={character}
+              // problem_id={character.problem_id}
+              activeIndex={activeIndex}
+              activeAngle={activeAngle}
+              onClick={onClick}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
