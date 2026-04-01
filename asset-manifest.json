@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Spring/static/css/main.4e6f4998.css",
+    "main.js": "/Spring/static/js/main.abc33c6e.js",
+    "static/js/453.9f501f34.chunk.js": "/Spring/static/js/453.9f501f34.chunk.js",
+    "index.html": "/Spring/index.html",
+    "main.4e6f4998.css.map": "/Spring/static/css/main.4e6f4998.css.map",
+    "main.abc33c6e.js.map": "/Spring/static/js/main.abc33c6e.js.map",
+    "453.9f501f34.chunk.js.map": "/Spring/static/js/453.9f501f34.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e6f4998.css",
+    "static/js/main.abc33c6e.js"
+  ]
+}
