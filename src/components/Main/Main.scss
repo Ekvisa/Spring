@@ -13,7 +13,7 @@
       font-family: georgia;
       font-weight: bold;
       font-style: italic;
-      font-size: 14em;
+      font-size: calc(10vw + 4em); //подобрала на глаз для красивого ресайза
       color: $pinkColor;
       margin: 0;
     }
@@ -29,8 +29,8 @@
       );
       width: 1em;
       height: 1em;
-      left: 50%;
-      top: -0.5em;
+      left: 45%;
+      top: calc(30px - 10vh); //подобрала на глаз для красивого ресайза
       color: #333;
     }
   }

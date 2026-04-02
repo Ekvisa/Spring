@@ -26,7 +26,7 @@
     );
 
   @media (max-width: 1200px) {
-    padding-top: 20vh;
+    padding-top: 24vh;
     margin: unset;
     width: unset;
     --bgRotation: -90deg;
@@ -36,7 +36,7 @@
 .circleWrapper {
   position: relative;
   @media (max-width: 800px) {
-    scale: 0.7;
+    scale: 0.6;
   }
 }
 
