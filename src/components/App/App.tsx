@@ -4,6 +4,7 @@ import "./App.scss";
 import Circle from "../Circle/Circle";
 import { dotsCount, circleRadius } from "../../data";
 import { Route, Routes } from "react-router-dom";
+
 import Problems from "../Problems/Problems";
 import Tests from "../Tests/Tests";
 import Navigation from "../Navigation/Navigation";
