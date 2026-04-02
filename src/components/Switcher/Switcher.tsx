@@ -8,7 +8,6 @@ type SwitcherProps = {
   index: number;
   total: number;
   character: CharacterType;
-
   activeIndex: number;
   activeAngle: number;
   onClick: (index: number) => void;
@@ -17,9 +16,7 @@ type SwitcherProps = {
 function Switcher({
   index,
   total,
-
   character,
-
   activeIndex,
   activeAngle,
   onClick,

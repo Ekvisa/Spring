@@ -1,3 +1,5 @@
+@use "./../colors" as *;
+
 .main {
   display: flex;
   flex-direction: column;
@@ -11,9 +13,8 @@
       font-family: georgia;
       font-weight: bold;
       font-style: italic;
-      //   font-size: 20vw;
       font-size: 14em;
-      color: #ff9a9b;
+      color: $pinkColor;
       margin: 0;
     }
 
@@ -21,8 +22,11 @@
       content: "❀";
       position: absolute;
       font-size: 5em;
-
-      background-image: radial-gradient(circle, #ff9a9b 50%, transparent 50%);
+      background-image: radial-gradient(
+        circle,
+        $pinkColor 50%,
+        transparent 50%
+      );
       width: 1em;
       height: 1em;
       left: 50%;
@@ -39,11 +43,11 @@
     justify-content: center;
     align-items: center;
     .help {
-      color: #666;
+      color: $accentGrayColor;
     }
     .motto {
       font-style: italic;
-      color: #ff9a9b;
+      color: $pinkColor;
     }
     a {
       border-radius: 1em;
@@ -52,14 +56,14 @@
       display: block;
       text-decoration: none;
       &.project {
-        background-color: #ff9a9b;
+        background-color: $pinkColor;
       }
       &.stories {
-        background-color: #bbb;
+        background-color: $lightGrayColor;
       }
       &:hover {
         color: white;
-        box-shadow: 0 0 10px #4c4c4ca8;
+        box-shadow: 0 0 10px $lightGrayColor;
       }
     }
   }

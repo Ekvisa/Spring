@@ -1,19 +1,18 @@
+@use "./../colors" as *;
+
 .switcherText {
   position: absolute;
   left: calc(7vw + var(--switcher-radius));
   top: 0;
-
   animation: slowAppear 2s linear;
   width: 23vw;
 
   .name {
     margin: 0;
-
     font-size: var(--switcher-radius);
   }
   .phrase {
     position: relative;
-    margin: 0;
     quotes: "「" "」" "„" "“";
     margin: 3em 2em 5em;
     animation: slowAppear 2s linear;
@@ -24,7 +23,7 @@
       top: -0.25em;
       font-size: 2em;
       font-weight: bold;
-      color: #666;
+      color: $accentGrayColor;
       animation: slowAppear 2s linear;
     }
     &::after {
@@ -34,17 +33,13 @@
       bottom: -0.5em;
       font-size: 2em;
       font-weight: bold;
-      color: #666;
+      color: $accentGrayColor;
       animation: slowAppear 2s linear;
     }
   }
   a {
     display: block;
     margin: 1em 0;
-
-    &:hover {
-      text-decoration: none;
-    }
   }
 
   @media (max-width: 1200px) {
@@ -68,6 +63,6 @@
     color: transparent;
   }
   100% {
-    color: #333;
+    color: $darkGrayColor;
   }
 }

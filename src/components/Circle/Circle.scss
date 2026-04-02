@@ -1,5 +1,4 @@
-$lightGrayColor: #c8ceda;
-$darkGrayColor: #333;
+@use "./../colors" as *;
 
 .seasons {
   --bgRotation: 0deg;
@@ -13,17 +12,17 @@ $darkGrayColor: #333;
   overflow: hidden;
 
   background:
-    radial-gradient(circle at center, rgb(255, 255, 255), transparent 300px),
+    radial-gradient(circle at center, white, transparent 300px),
     conic-gradient(
       from var(--bgRotation) at 50% 50%,
-      #93c6e6 17deg,
-      #ffa1a1 73deg,
-      #ffa1a1 108deg,
-      #81cc81 172deg,
-      #81cc81 194deg,
-      #f1c27c 265deg,
-      #f1c27c 284deg,
-      #93c6e6 345deg
+      $blueColor 17deg,
+      $pinkColor 73deg,
+      $pinkColor 108deg,
+      $greenColor 172deg,
+      $greenColor 194deg,
+      $yellowColor 265deg,
+      $yellowColor 284deg,
+      $blueColor 345deg
     );
 
   @media (max-width: 1200px) {

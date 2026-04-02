@@ -1,5 +1,3 @@
-import { useParams } from "react-router-dom";
-
 import { problems } from "../../data";
 
 function Tests() {
@@ -7,7 +5,6 @@ function Tests() {
     <div className="contentWrapper">
       <div className="content">
         <h1>Тесты</h1>
-
         <p>Тесты не ставят диагноз, но могут помочь лучше узнать себя. </p>
         {problems.map((p) => (
           <div key={p.id}>
@@ -17,8 +14,6 @@ function Tests() {
                 <li key={i}>{q}</li>
               ))}
             </ol>
-
-            {/* <p>{p.description}</p> */}
           </div>
         ))}
       </div>

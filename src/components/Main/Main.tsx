@@ -2,8 +2,7 @@ import React from "react";
 
 import "./Main.scss";
 
-import { Link, Route, Routes } from "react-router-dom";
-import Problems from "../Problems/Problems";
+import { Link } from "react-router-dom";
 
 function Main() {
   return (
@@ -14,7 +13,6 @@ function Main() {
       <section>
         <p className="help">Сервис, который помогает разобраться в себе</p>
         <p className="motto">Пусть снег превратится в весну!</p>
-
         <Link to="/about" className="project">
           О проекте
         </Link>
@@ -25,7 +23,6 @@ function Main() {
           <br />
           Возможно, теперь ваша очередь.
         </p>
-
         <Link to="/circle" className="stories">
           Посмотреть истории
         </Link>

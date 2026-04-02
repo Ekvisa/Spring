@@ -1,10 +1,8 @@
 import React from "react";
-// import logo from './logo.svg';
 import "./App.scss";
 import Circle from "../Circle/Circle";
 import { dotsCount, circleRadius } from "../../data";
 import { Route, Routes } from "react-router-dom";
-
 import Problems from "../Problems/Problems";
 import Tests from "../Tests/Tests";
 import Navigation from "../Navigation/Navigation";
@@ -18,7 +16,6 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Main />} />
-        {/* <Route path="/main" element={<Main />} /> */}
         <Route
           path="/circle"
           element={<Circle dotsCount={dotsCount} circleRadius={circleRadius} />}

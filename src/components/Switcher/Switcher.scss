@@ -1,5 +1,4 @@
-$lightGrayColor: #c8ceda;
-$darkGrayColor: #333;
+@use "./../colors" as *;
 
 .switcher {
   position: absolute;
@@ -38,9 +37,4 @@ $darkGrayColor: #333;
     border: none;
     cursor: unset;
   }
-
-  // @media (max-width: 800px) {
-  //   width: var(--switcher-radius);
-  //   height: var(--switcher-radius);
-  // }
 }

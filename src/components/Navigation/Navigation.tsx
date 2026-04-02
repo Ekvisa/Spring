@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Navigation.scss";
 
-import { Link, NavLink, Route, Routes } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navigation() {
   return (
