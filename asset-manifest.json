@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Spring/static/css/main.ddeadbc1.css",
+    "main.css": "/Spring/static/css/main.e10d9552.css",
     "main.js": "/Spring/static/js/main.4e8d78f3.js",
     "static/js/453.9f501f34.chunk.js": "/Spring/static/js/453.9f501f34.chunk.js",
     "index.html": "/Spring/index.html",
-    "main.ddeadbc1.css.map": "/Spring/static/css/main.ddeadbc1.css.map",
+    "main.e10d9552.css.map": "/Spring/static/css/main.e10d9552.css.map",
     "main.4e8d78f3.js.map": "/Spring/static/js/main.4e8d78f3.js.map",
     "453.9f501f34.chunk.js.map": "/Spring/static/js/453.9f501f34.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ddeadbc1.css",
+    "static/css/main.e10d9552.css",
     "static/js/main.4e8d78f3.js"
   ]
 }
