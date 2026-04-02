@@ -4,7 +4,6 @@ import { useState } from "react";
 import Switcher from "../Switcher/Switcher";
 import { normalizeAngle } from "../../types";
 import Avatar from "../Avatar/Avatar";
-import Phrase from "../Phrase/Phrase";
 
 type CircleProps = {
   dotsCount: number;
@@ -30,7 +29,6 @@ function Circle({ dotsCount, circleRadius }: CircleProps) {
     <div className="seasons">
       <div className="circleWrapper">
         <Avatar activeIndex={activeIndex} />
-        {/* <Phrase activeIndex={activeIndex} /> */}
         <div
           className="circle"
           style={
@@ -46,7 +44,6 @@ function Circle({ dotsCount, circleRadius }: CircleProps) {
               index={i}
               total={dotsCount}
               character={character}
-              // problem_id={character.problem_id}
               activeIndex={activeIndex}
               activeAngle={activeAngle}
               onClick={onClick}

@@ -2,13 +2,13 @@
   position: absolute;
   left: calc(7vw + var(--switcher-radius));
   top: 0;
-  color: #333;
+
   animation: slowAppear 2s linear;
   width: 23vw;
 
   .name {
     margin: 0;
-    // animation: slowAppear 4s linear;
+
     font-size: var(--switcher-radius);
   }
   .phrase {
@@ -41,10 +41,22 @@
   a {
     display: block;
     margin: 1em 0;
-    animation: slowAppear 3s linear;
+
     &:hover {
       text-decoration: none;
     }
+  }
+
+  @media (max-width: 1200px) {
+    left: unset;
+    top: unset;
+    bottom: 22vh;
+    right: 0;
+    width: calc(2 * var(--circle-radius));
+    text-align: right;
+  }
+  @media (max-width: 800px) {
+    font-size: 1.8em;
   }
 }
 

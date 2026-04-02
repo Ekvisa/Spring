@@ -2,29 +2,27 @@ import React from "react";
 
 import "./Navigation.scss";
 
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, NavLink, Route, Routes } from "react-router-dom";
 
 function Navigation() {
   return (
     <nav className="navigation">
       <ul>
         <li>
-          <Link to="/">Spring</Link>
+          <NavLink to="/">Spring</NavLink>
         </li>
         <li>
-          <Link to="/circle">Круг</Link>
+          <NavLink to="/circle">Круг</NavLink>
         </li>
         <li>
-          <Link to="/problems">Проблемы</Link>
+          <NavLink to="/problems">Проблемы</NavLink>
         </li>
         <li>
-          <Link to="/tests">Тесты</Link>
+          <NavLink to="/tests">Тесты</NavLink>
         </li>
         <li>
-          <Link to="/about">О проекте</Link>
+          <NavLink to="/about">О проекте</NavLink>
         </li>
-
-        {/* <Link to={`#`}>Обсудить мою проблему</Link> */}
       </ul>
     </nav>
   );

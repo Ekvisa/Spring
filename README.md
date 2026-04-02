@@ -1,46 +1,91 @@
-# Getting Started with Create React App
+# 🌸 Spring
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Inspired by [Fruits Basket](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://en.wikipedia.org/wiki/Fruits_Basket&ved=2ahUKEwjO7orTus6TAxWnUMMIHZZyNikQFnoECBoQAQ&usg=AOvVaw1wHoCjU1L5UE5EmNFoTJ2Q) anime and online psychological services._
 
-## Available Scripts
+_In the original story, the characters break free from toxic bonds. But what happens next? Here, characters speak as if they’ve already taken a step further._
 
-In the project directory, you can run:
+_Live: https://ekvisa.github.io/Spring/_
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 🎡 Interactive circle
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Navigate between characters
+- Each one is connected to a psychological theme and a test
+- The UI is built as an emotional exploration, not just navigation
 
-### `npm test`
+#### Why a circle?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The circular layout came from an interesting test assignment where I implemented a similar UI. I decided to improve it's realsation and find a use for it.
 
-### `npm run build`
+#### Why not a library?
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The circular UI could be implemented using existing carousel or animation libraries.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+However, it was built from scratch to:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- make the math cleaner
+- make positioning more consistent
+- connect layout logic with CSS
+- avoid unnecessary abstraction
 
-### `npm run eject`
+### 🧩 Reusable geometry
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The circle is built in a way that makes it reusable.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+By changing:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- circle radius
+- sector radius
+- number of sectors
+- active angle
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+the same logic can be applied to other interfaces.
 
-## Learn More
+This turns the component into a small layout system rather than a one-off solution.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🎨 Separation of logic and UI
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Core values (radius, angles, positions) are calculated in JavaScript,
+while actual rendering is handled via SCSS using CSS variables.
+
+This allows:
+
+- keeping calculations predictable and centralized
+- adjusting visuals without touching logic
+
+## ⚙️ Tech
+
+- React + TypeScript
+- React Router
+- GitHub Pages (deployed under `/Spring`)
+
+### Routing
+
+Uses `BrowserRouter` with basename:
+
+```tsx
+<BrowserRouter basename="/Spring">
+```
+
+### Images
+
+Images are stored in `public/characters`.
+
+Paths are built using:
+
+```ts
+process.env.PUBLIC_URL;
+```
+
+This ensures correct behavior both locally and in production.
+
+### Dynamic pages
+
+All problem pages are generated from a data array:
+
+```
+/problems/:id
+```
+
+One component handles all cases.

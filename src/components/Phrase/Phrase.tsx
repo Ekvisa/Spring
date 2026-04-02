@@ -13,8 +13,12 @@ function Phrase({ name, phrase, problem_id }: PhraseProps) {
 
       <blockquote className="phrase">{phrase}</blockquote>
 
-      <Link to={`/problems/${problem_id}`}>Подробнее про {problem?.title}</Link>
-      <Link to={`#`}>Обсудить мою проблему</Link>
+      {problem && (
+        <Link to={`/problems/${problem_id}`}>
+          {problem.title.charAt(0).toUpperCase() + problem.title.slice(1)}
+        </Link>
+      )}
+      <Link to="/about">У меня другая проблема</Link>
     </div>
   );
 }

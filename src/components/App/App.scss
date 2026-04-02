@@ -1,58 +1,33 @@
 .app {
   min-height: 100vh;
+  //   max-width: 1440px;
   display: flex;
   flex-direction: column;
+  color: #333;
   a {
     color: inherit;
   }
-  //   width: 140vw;
-  //   margin-left: -40vw;
-  //   height: 100vh;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
 
-  //   background:
-
-  //     /* Modern browsers */
-  //     radial-gradient(circle at center, rgb(255, 255, 255), transparent 50%),
-  //     conic-gradient(
-  //       from 0deg at 50% 50%,
-  //       #93c6e6 17deg,
-  //       #ffa1a1 73deg,
-  //       #ffa1a1 108deg,
-  //       #81cc81 172deg,
-  //       #81cc81 194deg,
-  //       #f1c27c 265deg,
-  //       #f1c27c 284deg,
-  //       #93c6e6 345deg
-  //     );
-
-  //   background-image: url("./../../interface_images/characters/kyo.webp");
-
-  //   /* Safari */
-  //   -webkit-background: conic-gradient(
-  //     from 0deg at 50% 50%,
-  //     rgb(125, 208, 255) 17deg,
-  //     rgba(193, 70, 173, 1) 73deg,
-  //     rgba(193, 70, 173, 1) 108deg,
-  //     rgb(243, 74, 74) 172deg,
-  //     rgba(243, 74, 74, 1) 194deg,
-  //     rgba(255, 146, 17, 1) 265deg,
-  //     rgba(255, 146, 17, 1) 284deg,
-  //     rgba(125, 208, 255, 1) 345deg
-  //   );
-
-  //   /* Firefox */
-  //   -moz-background: conic-gradient(
-  //     from 0deg at 50% 50%,
-  //     rgb(125, 208, 255) 17deg,
-  //     rgba(193, 70, 173, 1) 73deg,
-  //     rgba(193, 70, 173, 1) 108deg,
-  //     rgb(243, 74, 74) 172deg,
-  //     rgba(243, 74, 74, 1) 194deg,
-  //     rgba(255, 146, 17, 1) 265deg,
-  //     rgba(255, 146, 17, 1) 284deg,
-  //     rgba(125, 208, 255, 1) 345deg
-  //   );
+  .contentWrapper {
+    margin: 2em 10%;
+    max-width: 800px;
+    position: relative;
+    h1 {
+      font-style: italic;
+      color: #ff9a9b;
+      font-size: 3em;
+      font-family: georgia;
+    }
+    &::before {
+      content: "❀";
+      position: fixed;
+      right: -20vw;
+      top: 0;
+      font-size: 100vw;
+      line-height: 1em;
+      color: rgba(200, 200, 200, 0.2);
+      z-index: -1;
+      transform: translateY(calc(100px - 0.1em));
+    }
+  }
 }

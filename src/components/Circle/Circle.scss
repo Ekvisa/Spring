@@ -2,20 +2,20 @@ $lightGrayColor: #c8ceda;
 $darkGrayColor: #333;
 
 .seasons {
+  --bgRotation: 0deg;
+
   width: 140vw;
   margin-left: -40vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   background:
-
-    /* Modern browsers */
-    radial-gradient(circle at center, rgb(255, 255, 255), transparent 50%),
+    radial-gradient(circle at center, rgb(255, 255, 255), transparent 300px),
     conic-gradient(
-      from 0deg at 50% 50%,
+      from var(--bgRotation) at 50% 50%,
       #93c6e6 17deg,
       #ffa1a1 73deg,
       #ffa1a1 108deg,
@@ -26,37 +26,19 @@ $darkGrayColor: #333;
       #93c6e6 345deg
     );
 
-  //   background-image: url("./../../interface_images/characters/kyo.webp");
-
-  //   /* Safari */
-  //   -webkit-background: conic-gradient(
-  //     from 0deg at 50% 50%,
-  //     rgb(125, 208, 255) 17deg,
-  //     rgba(193, 70, 173, 1) 73deg,
-  //     rgba(193, 70, 173, 1) 108deg,
-  //     rgb(243, 74, 74) 172deg,
-  //     rgba(243, 74, 74, 1) 194deg,
-  //     rgba(255, 146, 17, 1) 265deg,
-  //     rgba(255, 146, 17, 1) 284deg,
-  //     rgba(125, 208, 255, 1) 345deg
-  //   );
-
-  //   /* Firefox */
-  //   -moz-background: conic-gradient(
-  //     from 0deg at 50% 50%,
-  //     rgb(125, 208, 255) 17deg,
-  //     rgba(193, 70, 173, 1) 73deg,
-  //     rgba(193, 70, 173, 1) 108deg,
-  //     rgb(243, 74, 74) 172deg,
-  //     rgba(243, 74, 74, 1) 194deg,
-  //     rgba(255, 146, 17, 1) 265deg,
-  //     rgba(255, 146, 17, 1) 284deg,
-  //     rgba(125, 208, 255, 1) 345deg
-  //   );
+  @media (max-width: 1200px) {
+    padding-top: 20vh;
+    margin: unset;
+    width: unset;
+    --bgRotation: -90deg;
+  }
 }
 
 .circleWrapper {
   position: relative;
+  @media (max-width: 800px) {
+    scale: 0.7;
+  }
 }
 
 .circle {
@@ -67,6 +49,4 @@ $darkGrayColor: #333;
   border-radius: 50%;
   transform: rotate(var(--rotationAngle));
   transition: transform 1s ease-in-out;
-  &::before {
-  }
 }
