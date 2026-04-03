@@ -26,10 +26,11 @@
     );
 
   @media (max-width: 1200px) {
-    padding-top: 24vh;
+    padding-top: 30vw;
     margin: unset;
     width: unset;
     --bgRotation: -90deg;
+    // padding-top: var(--circle-radius);
   }
 }
 
